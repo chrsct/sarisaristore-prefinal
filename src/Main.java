@@ -3,7 +3,9 @@ import activities._exit;
 import activities._retry;
 import usermechanic._login;
 
-// Inserting underscore(_) to avoid any possible reserved keywords.
+/* 
+* Inserting underscores(_) on my own classes to avoid any possible reserved keywords & cleaner naming convensions.
+*/
 
 public class Main {
     Scanner input = new Scanner(System.in);

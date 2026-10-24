@@ -5,22 +5,30 @@ import app.Main;
 
 public class Insert {
     Scanner input = new Scanner(System.in);
+    public static String itemName = "---";
+    public static String itemDescription = "---";
+    public static double itemPrice = 0;
+    public static int itemQuantity = 0;
+    public static int shelf = 0;
     public void insertInventory() throws Exception {
+        
+        
         Insert itemInput = new Insert();
         System.out.print("\033[H\033[2J");
         System.out.println("--INSERTING ITEM--");
         System.out.print("Item Name: ");
-        String itemName = itemInput.input.nextLine();
+        itemName = itemInput.input.nextLine();
         System.out.print("Item Description: ");
-        String itemDescription = itemInput.input.nextLine();
+        itemDescription = itemInput.input.nextLine();
         Price();
     }
 
     static void Price() throws Exception {
         Insert priceInput = new Insert();
         System.out.print("Item Price: ");
+
         try {
-            double itemPrice = priceInput.input.nextDouble();
+            itemPrice = priceInput.input.nextDouble();
             Quantity();
         } catch (Exception price) {
             System.out.print("\033[H\033[2J");
@@ -36,7 +44,7 @@ public class Insert {
         Insert quantityInput = new Insert();
         System.out.print("Item Quantity: ");
         try {
-            int itemQuantity = quantityInput.input.nextInt();
+            itemQuantity = quantityInput.input.nextInt();
             Location();
 
         } catch (Exception price) {
@@ -55,7 +63,7 @@ public class Insert {
         System.out.println("Shelf you have: (0,1,2,3)");
         System.out.print("Shelf Number: ");
         try {
-            int shelf = locationInput.input.nextInt();
+            shelf = locationInput.input.nextInt();
             if (shelf >= 4) {
                 System.out.print("\033[H\033[2J");
                 System.out.println("Shelf not found");

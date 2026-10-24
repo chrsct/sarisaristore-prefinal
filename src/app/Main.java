@@ -4,7 +4,7 @@ import activities._exit;
 import activities._retry;
 import usermechanic._login;
 import inventory.Insert;
-// import inventory.View;
+import inventory.View;
 
 /* 
 * Inserting underscores(_) on my own classes to avoid any possible reserved keywords & cleaner naming convensions.
@@ -31,6 +31,9 @@ public class Main {
             } else if (choice == 1) {
                 Insert ins = new Insert();
                 ins.insertInventory();
+            } else if (choice == 2) {
+                View vi = new View();
+                vi.ViewRecent();
             }
             
         } catch(Exception Safety0) {
